@@ -25,7 +25,7 @@ ACONEWS is a news application built using React and the GNews API. It allows use
 
 1. **Clone the Repository:**
     ```bash
-    git clone https://github.com/subhranshuchoudhury/aconews
+    git clone https://github.com/Nageshwar-Bedge/AcoNews
     ```
 
 2. **Navigate to the Frontend Directory:**
