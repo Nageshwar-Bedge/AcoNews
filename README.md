@@ -18,7 +18,7 @@ ACONEWS is a news application built using React and the GNews API. It allows use
 - **Axios:** For making API calls to GNews.
 - **CSS:** For styling and responsiveness.
 - **GNews API:** To fetch news articles based on the selected country and search term.
-- **Express JS:** For backend APIs (if used).
+- **Express JS:** For backend APIs.
 - **Node JS:** The runtime environment for the project.
 
 ## Installation Instructions
