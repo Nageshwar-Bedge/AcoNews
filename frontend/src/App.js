@@ -75,14 +75,7 @@ function App() {
                         <option value="ca">Canada</option>
                         <option value="au">Australia</option>
                         <option value="in">India</option>
-                        <option value="jp">Japan</option>
-                        <option value="cn">China</option>
-                        <option value="fr">France</option>
-                        <option value="de">Germany</option>
-                        <option value="it">Italy</option>
-                        <option value="es">Spain</option>
                         <option value="mx">Mexico</option>
-                        <option value="br">Brazil</option>
                         <option value="za">South Africa</option>
                     </select>
                     <button onClick={fetchNews}>Search</button>
