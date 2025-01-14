@@ -2,9 +2,9 @@ import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import './App.css';
 
-// Constants
-const API_KEY = '3dc9ef32c095edddbda60379c23332f7';
-const API_URL = 'https://gnews.io/api/v4/top-headlines';
+// Constants from .env
+const API_KEY = process.env.REACT_APP_API_KEY;
+const API_URL = process.env.REACT_APP_API_URL;
 
 function App() {
     const [articles, setArticles] = useState([]);
