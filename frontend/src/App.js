@@ -3,8 +3,11 @@ import axios from 'axios';
 import './App.css';
 
 // Constants from .env
-const API_KEY = process.env.REACT_APP_API_KEY;
-const API_URL = process.env.REACT_APP_API_URL;
+// const API_KEY = process.env.REACT_APP_API_KEY;
+// const API_URL = process.env.REACT_APP_API_URL;
+
+const API_KEY = '3dc9ef32c095edddbda60379c23332f7';
+const API_URL = 'https://gnews.io/api/v4/top-headlines';
 
 function App() {
     const [articles, setArticles] = useState([]);
