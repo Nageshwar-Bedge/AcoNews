@@ -1,12 +1,10 @@
+//3dc9ef32c095edddbda60379c23332f7
+
 import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import './App.css';
 
-// Constants from .env
-// const API_KEY = process.env.REACT_APP_API_KEY;
-// const API_URL = process.env.REACT_APP_API_URL;
-
-const API_KEY = '3dc9ef32c095edddbda60379c23332f7';
+const API_KEY = '3dc9ef32c095edddbda60379c23332f7'; 
 const API_URL = 'https://gnews.io/api/v4/top-headlines';
 
 function App() {
@@ -14,6 +12,7 @@ function App() {
     const [query, setQuery] = useState('latest');
     const [category, setCategory] = useState('general');
     const [country, setCountry] = useState('');
+    const [isVisible, setIsVisible] = useState(false);
 
     const fetchNews = useCallback(async () => {
         try {
@@ -48,6 +47,28 @@ function App() {
     const handleCountryChange = (e) => {
         setCountry(e.target.value);
     };
+
+    const toggleVisibility = () => {
+        if (window.scrollY > 300) {
+            setIsVisible(true);
+        } else {
+            setIsVisible(false);
+        };
+    };
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', toggleVisibility);
+        return () => {
+            window.removeEventListener('scroll', toggleVisibility);
+        };
+    }, []);
 
     return (
         <div className="App">
@@ -94,6 +115,17 @@ function App() {
                     </div>
                 ))}
             </div>
+            {isVisible && (<button 
+            className="scroll-to-top"
+            onClick={scrollToTop}
+            >
+             ↑
+            </button>
+            )}
+
+            <footer className="footer">
+                Developed by Nageshwar Bedge
+            </footer>
         </div>
     );
 }
