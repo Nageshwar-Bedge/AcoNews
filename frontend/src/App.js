@@ -4,7 +4,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import './App.css';
 
-const API_KEY = 3dc9ef32c095edddbda60379c23332f7; 
+const API_KEY = '3dc9ef32c095edddbda60379c23332f7'; 
 const API_URL = 'https://gnews.io/api/v4/top-headlines';
 
 function App() {
